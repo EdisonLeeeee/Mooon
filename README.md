@@ -1,12 +1,12 @@
 # Mooon: Graph Data Augmentation Library
 
-<p align="left">
-  <img width = "230" height = "55" src="./imgs/favicon.png" alt="banner"/>
+<p align="center">
+  <img width = "500" height = "135" src="./imgs/mooon.png" alt="banner"/>
   <br/>
 </p>
 <p align="center"><strong></strong></p>
 
-<p align=left>
+<p align=center>
   <a href="https://www.python.org/downloads/release/python-370/">
     <img src="https://img.shields.io/badge/Python->=3.7-3776AB?logo=python" alt="Python">
   </a>
@@ -15,6 +15,12 @@
   </a>
   <a href="https://github.com/EdisonLeeeee/Mooon/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/EdisonLeeeee/Mooon" alt="license">
+  </a>
+  <a href="https://pypi.org/project/mooon/">
+    <img src="https://badge.fury.io/py/mooon.png" alt="pypi">
+  </a>
+  <a href="https://mooon.readthedocs.io/en/latest">
+    <img src="https://readthedocs.org/projects/mooon/badge/?version=latest" alt="license">
   </a>
 </p>
 
