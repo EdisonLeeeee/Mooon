@@ -7,6 +7,16 @@
 <p align="center"><strong></strong></p>
 
 <p align=center>
+  <a href="https://mooon.readthedocs.io/en/latest/">
+    [Documentation]
+  </a>
+  |
+  <a href="https://github.com/EdisonLeeeee/Mooon/blob/master/examples">
+    [Examples]
+  </a>
+</p>
+
+<p align=center>
   <a href="https://www.python.org/downloads/release/python-370/">
     <img src="https://img.shields.io/badge/Python->=3.7-3776AB?logo=python" alt="Python">
   </a>
@@ -20,7 +30,7 @@
     <img src="https://badge.fury.io/py/mooon.png" alt="pypi">
   </a>
   <a href="https://mooon.readthedocs.io/en/latest">
-    <img src="https://readthedocs.org/projects/mooon/badge/?version=latest" alt="license">
+    <img src="https://readthedocs.org/projects/mooon/badge/?version=latest" alt="docs">
   </a>
 </p>
 
