@@ -27,7 +27,7 @@
     <img src="https://img.shields.io/github/license/EdisonLeeeee/Mooon" alt="license">
   </a>
   <a href="https://pypi.org/project/mooon/">
-    <img src="https://badge.fury.io/py/mooon.png" alt="pypi">
+    <img src="https://badge.fury.io/py/mooon.svg" alt="pypi">
   </a>
   <a href="https://mooon.readthedocs.io/en/latest">
     <img src="https://readthedocs.org/projects/mooon/badge/?version=latest" alt="docs">
