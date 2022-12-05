@@ -41,7 +41,7 @@ class DropEdge(nn.Module):
     .. code-block:: python
 
         from greatx.nn.layers import DropEdge
-        edge_index = torch.LongTensor([[1, 2], [3,4]])
+        edge_index = torch.tensor([[1, 2], [3,4]])
         DropEdge(p=0.5)(edge_index)
 
     See also
@@ -83,7 +83,7 @@ class DropNode(nn.Module):
     .. code-block:: python
 
         from greatx.nn.layers import DropNode
-        edge_index = torch.LongTensor([[1, 2], [3,4]])
+        edge_index = torch.tensor([[1, 2], [3,4]])
         DropNode(p=0.5)(edge_index)
 
     See also
@@ -146,7 +146,7 @@ class DropPath(nn.Module):
     .. code-block:: python
 
         from greatx.nn.layers import DropPath
-        edge_index = torch.LongTensor([[1, 2], [3,4]])
+        edge_index = torch.tensor([[1, 2], [3,4]])
         DropPath(p=0.5)(edge_index)
 
         # specify root nodes
@@ -222,7 +222,7 @@ class AddRandomWalkEdge(nn.Module):
     .. code-block:: python
 
         from greatx.nn.layers import AddRandomWalkEdge
-        edge_index = torch.LongTensor([[1, 2], [3,4]])
+        edge_index = torch.tensor([[1, 2], [3,4]])
         AddRandomWalkEdge()(edge_index)
 
         # specify root nodes

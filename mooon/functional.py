@@ -58,7 +58,7 @@ def drop_edge(
     .. code-block:: python
 
         from mooon import drop_edge
-        edge_index = torch.LongTensor([[1, 2], [3,4]])
+        edge_index = torch.tensor([[1, 2], [3,4]])
         drop_edge(edge_index, p=0.5)
 
     See also
@@ -120,7 +120,7 @@ def drop_node(
     .. code-block:: python
 
         from mooon import drop_node
-        edge_index = torch.LongTensor([[1, 2], [3,4]])
+        edge_index = torch.tensor([[1, 2], [3,4]])
         drop_node(edge_index, p=0.5)
 
     See also
@@ -202,7 +202,7 @@ def drop_path(
     .. code-block:: python
 
         from mooon import drop_path
-        edge_index = torch.LongTensor([[1, 2], [3,4]])
+        edge_index = torch.tensor([[1, 2], [3,4]])
         drop_path(edge_index, p=0.5)
 
         # specify root nodes
@@ -322,7 +322,7 @@ def add_random_walk_edge(
     .. code-block:: python
 
         from mooon import add_random_walk_edge
-        edge_index = torch.LongTensor([[1, 2], [3,4]])
+        edge_index = torch.tensor([[1, 2], [3,4]])
         add_random_walk_edge(edge_index)
 
         # specify root nodes
