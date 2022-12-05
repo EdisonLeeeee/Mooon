@@ -232,7 +232,7 @@ def drop_path(
         return edge_index, edge_mask
 
     if random_walk is None:
-        raise ImportError('`dropout_path` requires `torch-cluster`.')
+        raise ImportError('`drop_path` requires `torch-cluster`.')
 
     num_nodes = maybe_num_nodes(edge_index, num_nodes)
 
@@ -361,7 +361,7 @@ def add_random_walk_edge(
     rowptr = row.new_zeros(num_nodes + 1)
     torch.cumsum(deg, 0, out=rowptr[1:])
     p = q = 1.0
-    walks, e_id = random_walk(rowptr, col, start, walk_length, p, q)
+    walks = random_walk(rowptr, col, start, walk_length, p, q)[0]
 
     if skip_first:
         assert walk_length > 1
@@ -372,11 +372,13 @@ def add_random_walk_edge(
         rw_col = walks[:, 1:]
 
     aug_edge_index = torch.stack([rw_row, rw_col]).view(2, -1).contiguous()
+    # filter self-loops
     mask = aug_edge_index[0] != aug_edge_index[1]
     aug_edge_index = aug_edge_index[:, mask]
     edge_index = torch.cat([edge_index, aug_edge_index], dim=1)
 
     if edge_weight is not None:
+        assert edge_weight.ndim == 1
         aug_edge_weight = 1. / torch.arange(
             int(skip_first) + 1, walk_length + 1, dtype=torch.float,
             device=device)
