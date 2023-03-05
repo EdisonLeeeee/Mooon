@@ -27,6 +27,8 @@ class FLAG(nn.Module):
     -------
     .. code-block:: python
 
+        import torch
+        from mooon import FLAG
         data = ... # PyG-like data
         model = ... # GNN model
         optimizer = torch.optim.Adam()

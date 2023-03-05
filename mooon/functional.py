@@ -63,7 +63,7 @@ def drop_edge(
 
     See also
     --------
-    :class:`greatx.functional.DropEdge`
+    :class:`mooon.DropEdge`
 
     """
 
@@ -125,7 +125,7 @@ def drop_node(
 
     See also
     --------
-    :class:`greatx.functional.DropNode`
+    :class:`mooon.DropNode`
 
     """
 
@@ -211,7 +211,7 @@ def drop_path(
 
     See also
     --------
-    :class:`greatx.functional.DropPath`
+    :class:`mooon.DropPath`
     """
 
     if torch_cluster is None:
@@ -330,7 +330,7 @@ def add_random_walk_edge(
 
     See also
     --------
-    :class:`greatx.functional.AddRandomWalkEdge`
+    :class:`mooon.AddRandomWalkEdge`
     """
 
     if random_walk is None:

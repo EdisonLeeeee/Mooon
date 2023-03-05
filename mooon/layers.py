@@ -40,13 +40,13 @@ class DropEdge(nn.Module):
     -------
     .. code-block:: python
 
-        from greatx.nn.layers import DropEdge
+        from mooon import DropEdge
         edge_index = torch.tensor([[1, 2], [3,4]])
         DropEdge(p=0.5)(edge_index)
 
     See also
     --------
-    :class:`greatx.functional.drop_edge`
+    :class:`mooon.drop_edge`
     """
     def __init__(self, p: float = 0.5):
         super().__init__()
@@ -82,13 +82,13 @@ class DropNode(nn.Module):
     -------
     .. code-block:: python
 
-        from greatx.nn.layers import DropNode
+        from mooon import DropNode
         edge_index = torch.tensor([[1, 2], [3,4]])
         DropNode(p=0.5)(edge_index)
 
     See also
     --------
-    :class:`greatx.functional.drop_node`
+    :class:`mooon.drop_node`
     """
     def __init__(self, p: float = 0.5):
         super().__init__()
@@ -105,7 +105,7 @@ class DropNode(nn.Module):
 
 
 class DropPath(nn.Module):
-    """DropPath: a structured form of :class:`greatx.functional.drop_edge`
+    """DropPath: a structured form of :class:`mooon.drop_edge`
     from the `"MaskGAE: Masked Graph Modeling Meets
     Graph Autoencoders" <https://arxiv.org/abs/2205.10053>`_
     paper (arXiv'22)
@@ -145,7 +145,7 @@ class DropPath(nn.Module):
     -------
     .. code-block:: python
 
-        from greatx.nn.layers import DropPath
+        from mooon import DropPath
         edge_index = torch.tensor([[1, 2], [3,4]])
         DropPath(p=0.5)(edge_index)
 
@@ -154,7 +154,7 @@ class DropPath(nn.Module):
 
     See also
     --------
-    :class:`greatx.functional.drop_path`
+    :class:`mooon.drop_path`
     """
     def __init__(self, p: float = 0.5, walks_per_node: int = 1,
                  walk_length: int = 3, num_nodes: Optional[int] = None,
@@ -221,7 +221,7 @@ class AddRandomWalkEdge(nn.Module):
     -------
     .. code-block:: python
 
-        from greatx.nn.layers import AddRandomWalkEdge
+        from mooon import AddRandomWalkEdge
         edge_index = torch.tensor([[1, 2], [3,4]])
         AddRandomWalkEdge()(edge_index)
 
@@ -230,7 +230,7 @@ class AddRandomWalkEdge(nn.Module):
 
     See also
     --------
-    :class:`greatx.functional.add_random_walk_edge`
+    :class:`mooon.add_random_walk_edge`
     """
     def __init__(self, start: Optional[Tensor] = None, walks_per_node: int = 1,
                  walk_length: int = 3, skip_first: bool = True,
