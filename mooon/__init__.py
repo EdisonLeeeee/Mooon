@@ -1,3 +1,4 @@
+from .flag import FLAG
 from .functional import add_random_walk_edge, drop_edge, drop_node, drop_path
 from .layers import AddRandomWalkEdge, DropEdge, DropNode, DropPath
 from .version import __version__
@@ -12,4 +13,5 @@ __all__ = [
     "DropNode",
     "DropPath",
     "AddRandomWalkEdge",
+    "FLAG",
 ]
