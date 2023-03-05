@@ -19,8 +19,7 @@ Package API
    :maxdepth: 4
    :caption: Package Reference
 
-   modules/functional
-   modules/layers
+   modules/root
 
 
 Indices and Tables

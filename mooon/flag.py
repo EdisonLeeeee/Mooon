@@ -4,6 +4,8 @@ import torch
 import torch.nn as nn
 from torch import Tensor
 
+classes = __all__ = ["FLAG"]
+
 
 class FLAG(nn.Module):
     r"""The Free Large-scale Adversarial Augmentation (FLAG)
@@ -25,20 +27,20 @@ class FLAG(nn.Module):
     -------
     .. code-block:: python
 
-    data = ... # PyG-like data
-    model = ... # GNN model
-    optimizer = torch.optim.Adam()
-    criterion = torch.nn.CrossEntropycriterion()
-    flag = FLAG(criterion)
+        data = ... # PyG-like data
+        model = ... # GNN model
+        optimizer = torch.optim.Adam()
+        criterion = torch.nn.CrossEntropycriterion()
+        flag = FLAG(criterion)
 
-    def train():
-        model.train()
-        optimizer.zero_grad()
-        forward = lambda perturb: model(data.x + perturb, data.edge_index, data.edge_attr)[data.train_mask] # noqa
-        loss = flag(forward, data.x, data.y[data.train_mask])
-        loss.backward()
-        optimizer.step()
-        return float(loss)
+        def train():
+            model.train()
+            optimizer.zero_grad()
+            forward = lambda perturb: model(data.x + perturb, data.edge_index, data.edge_attr)[data.train_mask] # noqa
+            loss = flag(forward, data.x, data.y[data.train_mask])
+            loss.backward()
+            optimizer.step()
+            return float(loss)
 
     train()
 
