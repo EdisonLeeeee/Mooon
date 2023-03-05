@@ -33,10 +33,13 @@ class FLAG(nn.Module):
         criterion = torch.nn.CrossEntropycriterion()
         flag = FLAG(criterion)
 
+        def forward(perturb):
+            out = model(data.x + perturb, data.edge_index, data.edge_attr)
+            return out[data.train_mask]
+
         def train():
             model.train()
             optimizer.zero_grad()
-            forward = lambda perturb: model(data.x + perturb, data.edge_index, data.edge_attr)[data.train_mask] # noqa
             loss = flag(forward, data.x, data.y[data.train_mask])
             loss.backward()
             optimizer.step()
